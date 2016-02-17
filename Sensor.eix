@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project emblocks_ix="1.0.0" name="Sensor">
+    <Target name="Sensor" target="NUCLEO_F103RB">
+        <Source name="mbed.org" version="1.0.0">
+            <Toolchain name="GCC_ARM"/>
+            <CC>
+                <Switch name="-std=gnu99"/>
+                <Switch name="-c"/>
+                <Switch name="-Wall"/>
+                <Switch name="-Wextra"/>
+                <Switch name="-Wno-unused-parameter"/>
+                <Switch name="-Wno-missing-field-initializers"/>
+                <Switch name="-fmessage-length=0"/>
+                <Switch name="-fno-exceptions"/>
+                <Switch name="-fno-builtin"/>
+                <Switch name="-ffunction-sections"/>
+                <Switch name="-fdata-sections"/>
+                <Switch name="-MMD"/>
+                <Switch name="-fno-delete-null-pointer-checks"/>
+                <Switch name="-fomit-frame-pointer"/>
+                <Switch name="-mcpu=cortex-m3"/>
+                <Switch name="-mthumb"/>
+                <Switch name="-O2"/>
+                
+            </CC>
+            <CPPC>
+                <Switch name="-std=gnu++98"/>
+                <Switch name="-fno-rtti"/>
+                <Switch name="-c"/>
+                <Switch name="-Wall"/>
+                <Switch name="-Wextra"/>
+                <Switch name="-Wno-unused-parameter"/>
+                <Switch name="-Wno-missing-field-initializers"/>
+                <Switch name="-fmessage-length=0"/>
+                <Switch name="-fno-exceptions"/>
+                <Switch name="-fno-builtin"/>
+                <Switch name="-ffunction-sections"/>
+                <Switch name="-fdata-sections"/>
+                <Switch name="-MMD"/>
+                <Switch name="-fno-delete-null-pointer-checks"/>
+                <Switch name="-fomit-frame-pointer"/>
+                <Switch name="-mcpu=cortex-m3"/>
+                <Switch name="-mthumb"/>
+                <Switch name="-O2"/>
+                
+            </CPPC>
+            <Symbols>
+                <Symbol name="TARGET_FF_ARDUINO"/>
+                <Symbol name="TARGET_NUCLEO_F103RB"/>
+                <Symbol name="TOOLCHAIN_GCC"/>
+                <Symbol name="TARGET_FF_MORPHO"/>
+                <Symbol name="TARGET_CORTEX_M"/>
+                <Symbol name="TARGET_STM32F1"/>
+                <Symbol name="MBED_BUILD_TIMESTAMP=1455694336.4"/>
+                <Symbol name="ARM_MATH_CM3"/>
+                <Symbol name="__MBED__=1"/>
+                <Symbol name="TARGET_STM"/>
+                <Symbol name="TOOLCHAIN_GCC_ARM"/>
+                <Symbol name="__CORTEX_M3"/>
+                <Symbol name="TARGET_M3"/>
+                <Symbol name="TARGET_STM32F103RB"/>
+                
+            </Symbols>
+            <LD>
+                <Switch name="-Wl,--gc-sections"/>
+                <Switch name="-Wl,--wrap,main"/>
+                <Switch name="-mcpu=cortex-m3"/>
+                <Switch name="-mthumb"/>
+                <Switch name="--specs=nano.specs"/>
+                
+            </LD>
+            <Addobjects>
+                
+            </Addobjects>
+            <Syslibs>
+                <Library name="stdc++"/>
+                <Library name="supc++"/>
+                <Library name="m"/>
+                <Library name="c"/>
+                <Library name="gcc"/>
+                <Library name="nosys"/>
+                
+            </Syslibs>
+            <Scriptfile path="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/TOOLCHAIN_GCC_ARM/STM32F10X.ld"/>
+        </Source>
+        <Assembler>
+        </Assembler>
+        <Compiler>
+            <Includepaths>
+                <Includepath path="."/>
+                <Includepath path="HygroClip2"/>
+                <Includepath path="SPI_TFT_ILI9341"/>
+                <Includepath path="SPI_TFT_ILI9341/TFT_fonts"/>
+                <Includepath path="mbed-src"/>
+                <Includepath path="mbed-src/api"/>
+                <Includepath path="mbed-src/hal"/>
+                <Includepath path="mbed-src/targets"/>
+                <Includepath path="mbed-src/targets/cmsis"/>
+                <Includepath path="mbed-src/targets/cmsis/TARGET_STM"/>
+                <Includepath path="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB"/>
+                <Includepath path="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/TOOLCHAIN_GCC_ARM"/>
+                <Includepath path="mbed-src/targets/hal"/>
+                <Includepath path="mbed-src/targets/hal/TARGET_STM"/>
+                <Includepath path="mbed-src/targets/hal/TARGET_STM/TARGET_NUCLEO_F103RB"/>
+                <Includepath path="mbed-src/common"/>
+                
+            </Includepaths>
+            <Symbols>
+            </Symbols>
+        </Compiler>
+        <Linker>
+            <Libraries>
+                
+            </Libraries>
+            <Librarypaths>
+                
+            </Librarypaths>
+        </Linker>
+        <Files>
+            <File  name="GraphScale.h" type="h"/>
+            <File  name="LineGraph.h" type="h"/>
+            <File  name="HygroClip2/HygroClip2.h" type="h"/>
+            <File  name="SPI_TFT_ILI9341/GraphicsDisplay.h" type="h"/>
+            <File  name="SPI_TFT_ILI9341/SPI_TFT_ILI9341.h" type="h"/>
+            <File  name="SPI_TFT_ILI9341/TextDisplay.h" type="h"/>
+            <File  name="SPI_TFT_ILI9341/TFT_fonts/Arial12x12.h" type="h"/>
+            <File  name="SPI_TFT_ILI9341/TFT_fonts/Arial24x23.h" type="h"/>
+            <File  name="SPI_TFT_ILI9341/TFT_fonts/Arial28x28.h" type="h"/>
+            <File  name="SPI_TFT_ILI9341/TFT_fonts/font_big.h" type="h"/>
+            <File  name="mbed-src/api/AnalogIn.h" type="h"/>
+            <File  name="mbed-src/api/AnalogOut.h" type="h"/>
+            <File  name="mbed-src/api/BusIn.h" type="h"/>
+            <File  name="mbed-src/api/BusInOut.h" type="h"/>
+            <File  name="mbed-src/api/BusOut.h" type="h"/>
+            <File  name="mbed-src/api/CAN.h" type="h"/>
+            <File  name="mbed-src/api/CallChain.h" type="h"/>
+            <File  name="mbed-src/api/DigitalIn.h" type="h"/>
+            <File  name="mbed-src/api/DigitalInOut.h" type="h"/>
+            <File  name="mbed-src/api/DigitalOut.h" type="h"/>
+            <File  name="mbed-src/api/DirHandle.h" type="h"/>
+            <File  name="mbed-src/api/Ethernet.h" type="h"/>
+            <File  name="mbed-src/api/FileBase.h" type="h"/>
+            <File  name="mbed-src/api/FileHandle.h" type="h"/>
+            <File  name="mbed-src/api/FileLike.h" type="h"/>
+            <File  name="mbed-src/api/FilePath.h" type="h"/>
+            <File  name="mbed-src/api/FileSystemLike.h" type="h"/>
+            <File  name="mbed-src/api/FunctionPointer.h" type="h"/>
+            <File  name="mbed-src/api/I2C.h" type="h"/>
+            <File  name="mbed-src/api/I2CSlave.h" type="h"/>
+            <File  name="mbed-src/api/InterruptIn.h" type="h"/>
+            <File  name="mbed-src/api/InterruptManager.h" type="h"/>
+            <File  name="mbed-src/api/LocalFileSystem.h" type="h"/>
+            <File  name="mbed-src/api/PortIn.h" type="h"/>
+            <File  name="mbed-src/api/PortInOut.h" type="h"/>
+            <File  name="mbed-src/api/PortOut.h" type="h"/>
+            <File  name="mbed-src/api/PwmOut.h" type="h"/>
+            <File  name="mbed-src/api/RawSerial.h" type="h"/>
+            <File  name="mbed-src/api/SPI.h" type="h"/>
+            <File  name="mbed-src/api/SPISlave.h" type="h"/>
+            <File  name="mbed-src/api/Serial.h" type="h"/>
+            <File  name="mbed-src/api/SerialBase.h" type="h"/>
+            <File  name="mbed-src/api/Stream.h" type="h"/>
+            <File  name="mbed-src/api/Ticker.h" type="h"/>
+            <File  name="mbed-src/api/Timeout.h" type="h"/>
+            <File  name="mbed-src/api/Timer.h" type="h"/>
+            <File  name="mbed-src/api/TimerEvent.h" type="h"/>
+            <File  name="mbed-src/api/can_helper.h" type="h"/>
+            <File  name="mbed-src/api/mbed.h" type="h"/>
+            <File  name="mbed-src/api/mbed_assert.h" type="h"/>
+            <File  name="mbed-src/api/mbed_debug.h" type="h"/>
+            <File  name="mbed-src/api/mbed_error.h" type="h"/>
+            <File  name="mbed-src/api/mbed_interface.h" type="h"/>
+            <File  name="mbed-src/api/platform.h" type="h"/>
+            <File  name="mbed-src/api/rtc_time.h" type="h"/>
+            <File  name="mbed-src/api/semihost_api.h" type="h"/>
+            <File  name="mbed-src/api/toolchain.h" type="h"/>
+            <File  name="mbed-src/api/wait_api.h" type="h"/>
+            <File  name="mbed-src/hal/analogin_api.h" type="h"/>
+            <File  name="mbed-src/hal/analogout_api.h" type="h"/>
+            <File  name="mbed-src/hal/can_api.h" type="h"/>
+            <File  name="mbed-src/hal/ethernet_api.h" type="h"/>
+            <File  name="mbed-src/hal/gpio_api.h" type="h"/>
+            <File  name="mbed-src/hal/gpio_irq_api.h" type="h"/>
+            <File  name="mbed-src/hal/i2c_api.h" type="h"/>
+            <File  name="mbed-src/hal/pinmap.h" type="h"/>
+            <File  name="mbed-src/hal/port_api.h" type="h"/>
+            <File  name="mbed-src/hal/pwmout_api.h" type="h"/>
+            <File  name="mbed-src/hal/rtc_api.h" type="h"/>
+            <File  name="mbed-src/hal/serial_api.h" type="h"/>
+            <File  name="mbed-src/hal/sleep_api.h" type="h"/>
+            <File  name="mbed-src/hal/spi_api.h" type="h"/>
+            <File  name="mbed-src/hal/us_ticker_api.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/core_ca9.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/core_caFunc.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/core_caInstr.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/core_ca_mmu.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/core_cm0.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/core_cm0plus.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/core_cm3.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/core_cm4.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/core_cm4_simd.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/core_cmFunc.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/core_cmInstr.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/cmsis.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/cmsis_nvic.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/misc.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_adc.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_bkp.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_can.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_cec.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_conf.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_crc.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_dac.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_dbgmcu.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_dma.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_exti.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_flash.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_fsmc.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_gpio.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_i2c.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_iwdg.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_pwr.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_rcc.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_rtc.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_sdio.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_spi.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_tim.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_usart.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_wwdg.h" type="h"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/system_stm32f10x.h" type="h"/>
+            <File  name="mbed-src/targets/hal/TARGET_STM/TARGET_NUCLEO_F103RB/PeripheralNames.h" type="h"/>
+            <File  name="mbed-src/targets/hal/TARGET_STM/TARGET_NUCLEO_F103RB/PeripheralPins.h" type="h"/>
+            <File  name="mbed-src/targets/hal/TARGET_STM/TARGET_NUCLEO_F103RB/PinNames.h" type="h"/>
+            <File  name="mbed-src/targets/hal/TARGET_STM/TARGET_NUCLEO_F103RB/PortNames.h" type="h"/>
+            <File  name="mbed-src/targets/hal/TARGET_STM/TARGET_NUCLEO_F103RB/device.h" type="h"/>
+            <File  name="mbed-src/targets/hal/TARGET_STM/TARGET_NUCLEO_F103RB/gpio_object.h" type="h"/>
+            <File  name="mbed-src/targets/hal/TARGET_STM/TARGET_NUCLEO_F103RB/objects.h" type="h"/>
+            <File  name="main.cpp" type="cpp"/>
+            <File  name="GraphScale.cpp" type="cpp"/>
+            <File  name="HygroClip2/HygroClip2.cpp" type="cpp"/>
+            <File  name="SPI_TFT_ILI9341/GraphicsDisplay.cpp" type="cpp"/>
+            <File  name="SPI_TFT_ILI9341/SPI_TFT_ILI9341.cpp" type="cpp"/>
+            <File  name="SPI_TFT_ILI9341/SPI_TFT_ILI9341_NUCLEO.cpp" type="cpp"/>
+            <File  name="SPI_TFT_ILI9341/SPI_TFT_ILI9341_NXP.cpp" type="cpp"/>
+            <File  name="SPI_TFT_ILI9341/TextDisplay.cpp" type="cpp"/>
+            <File  name="mbed-src/common/BusIn.cpp" type="cpp"/>
+            <File  name="mbed-src/common/BusInOut.cpp" type="cpp"/>
+            <File  name="mbed-src/common/BusOut.cpp" type="cpp"/>
+            <File  name="mbed-src/common/CAN.cpp" type="cpp"/>
+            <File  name="mbed-src/common/CallChain.cpp" type="cpp"/>
+            <File  name="mbed-src/common/Ethernet.cpp" type="cpp"/>
+            <File  name="mbed-src/common/FileBase.cpp" type="cpp"/>
+            <File  name="mbed-src/common/FileLike.cpp" type="cpp"/>
+            <File  name="mbed-src/common/FilePath.cpp" type="cpp"/>
+            <File  name="mbed-src/common/FileSystemLike.cpp" type="cpp"/>
+            <File  name="mbed-src/common/FunctionPointer.cpp" type="cpp"/>
+            <File  name="mbed-src/common/I2C.cpp" type="cpp"/>
+            <File  name="mbed-src/common/I2CSlave.cpp" type="cpp"/>
+            <File  name="mbed-src/common/InterruptIn.cpp" type="cpp"/>
+            <File  name="mbed-src/common/InterruptManager.cpp" type="cpp"/>
+            <File  name="mbed-src/common/LocalFileSystem.cpp" type="cpp"/>
+            <File  name="mbed-src/common/RawSerial.cpp" type="cpp"/>
+            <File  name="mbed-src/common/SPI.cpp" type="cpp"/>
+            <File  name="mbed-src/common/SPISlave.cpp" type="cpp"/>
+            <File  name="mbed-src/common/Serial.cpp" type="cpp"/>
+            <File  name="mbed-src/common/SerialBase.cpp" type="cpp"/>
+            <File  name="mbed-src/common/Stream.cpp" type="cpp"/>
+            <File  name="mbed-src/common/Ticker.cpp" type="cpp"/>
+            <File  name="mbed-src/common/Timeout.cpp" type="cpp"/>
+            <File  name="mbed-src/common/Timer.cpp" type="cpp"/>
+            <File  name="mbed-src/common/TimerEvent.cpp" type="cpp"/>
+            <File  name="mbed-src/common/retarget.cpp" type="cpp"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/cmsis_nvic.c" type="c"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/misc.c" type="c"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_adc.c" type="c"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_bkp.c" type="c"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_can.c" type="c"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_cec.c" type="c"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_crc.c" type="c"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_dac.c" type="c"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_dbgmcu.c" type="c"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_dma.c" type="c"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_exti.c" type="c"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_flash.c" type="c"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_fsmc.c" type="c"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_gpio.c" type="c"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_i2c.c" type="c"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_iwdg.c" type="c"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_pwr.c" type="c"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_rcc.c" type="c"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_rtc.c" type="c"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_sdio.c" type="c"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_spi.c" type="c"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_tim.c" type="c"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_usart.c" type="c"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/stm32f10x_wwdg.c" type="c"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/system_stm32f10x.c" type="c"/>
+            <File  name="mbed-src/targets/hal/TARGET_STM/TARGET_NUCLEO_F103RB/PeripheralPins.c" type="c"/>
+            <File  name="mbed-src/targets/hal/TARGET_STM/TARGET_NUCLEO_F103RB/analogin_api.c" type="c"/>
+            <File  name="mbed-src/targets/hal/TARGET_STM/TARGET_NUCLEO_F103RB/gpio_api.c" type="c"/>
+            <File  name="mbed-src/targets/hal/TARGET_STM/TARGET_NUCLEO_F103RB/gpio_irq_api.c" type="c"/>
+            <File  name="mbed-src/targets/hal/TARGET_STM/TARGET_NUCLEO_F103RB/i2c_api.c" type="c"/>
+            <File  name="mbed-src/targets/hal/TARGET_STM/TARGET_NUCLEO_F103RB/mbed_overrides.c" type="c"/>
+            <File  name="mbed-src/targets/hal/TARGET_STM/TARGET_NUCLEO_F103RB/pinmap.c" type="c"/>
+            <File  name="mbed-src/targets/hal/TARGET_STM/TARGET_NUCLEO_F103RB/port_api.c" type="c"/>
+            <File  name="mbed-src/targets/hal/TARGET_STM/TARGET_NUCLEO_F103RB/pwmout_api.c" type="c"/>
+            <File  name="mbed-src/targets/hal/TARGET_STM/TARGET_NUCLEO_F103RB/rtc_api.c" type="c"/>
+            <File  name="mbed-src/targets/hal/TARGET_STM/TARGET_NUCLEO_F103RB/serial_api.c" type="c"/>
+            <File  name="mbed-src/targets/hal/TARGET_STM/TARGET_NUCLEO_F103RB/sleep.c" type="c"/>
+            <File  name="mbed-src/targets/hal/TARGET_STM/TARGET_NUCLEO_F103RB/spi_api.c" type="c"/>
+            <File  name="mbed-src/targets/hal/TARGET_STM/TARGET_NUCLEO_F103RB/us_ticker.c" type="c"/>
+            <File  name="mbed-src/common/assert.c" type="c"/>
+            <File  name="mbed-src/common/board.c" type="c"/>
+            <File  name="mbed-src/common/error.c" type="c"/>
+            <File  name="mbed-src/common/exit.c" type="c"/>
+            <File  name="mbed-src/common/gpio.c" type="c"/>
+            <File  name="mbed-src/common/mbed_interface.c" type="c"/>
+            <File  name="mbed-src/common/pinmap_common.c" type="c"/>
+            <File  name="mbed-src/common/rtc_time.c" type="c"/>
+            <File  name="mbed-src/common/semihost_api.c" type="c"/>
+            <File  name="mbed-src/common/us_ticker_api.c" type="c"/>
+            <File  name="mbed-src/common/wait_api.c" type="c"/>
+            <File  name="mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/TOOLCHAIN_GCC_ARM/startup_stm32f10x.S" type="a"/>
+            
+        </Files>
+    </Target>
+</Project>

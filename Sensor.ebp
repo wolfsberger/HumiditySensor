@@ -1,0 +1,1600 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<EmBlocks_project_file>
+	<EmBlocksVersion release="2.30" revision="1" />
+	<FileVersion major="1" minor="0" />
+	<Project>
+		<Option title="Sensor" />
+		<Option pch_mode="2" />
+		<Option compiler="armgcc_eb" />
+		<Build>
+			<Target title="Sensor">
+				<Option output=".\build\Sensor.elf" />
+				<Option type="0" />
+				<Option compiler="armgcc_eb" />
+				<Device>
+					<Add option="$device=cortex-m3" />
+					<Add option="$lscript=mbed-src/targets/cmsis/TARGET_STM/TARGET_NUCLEO_F103RB/TOOLCHAIN_GCC_ARM/STM32F10X.ld" />
+				</Device>
+				<Compiler>
+					<Add option="-fno-exceptions" />
+					<Add option="-std=gnu99" />
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-fdata-sections" />
+					<Add option="-ffunction-sections" />
+					<Add option="-O2" />
+					<Add option="-g3" />
+					<Add option="-DTARGET_FF_ARDUINO" />
+					<Add option="-DTARGET_NUCLEO_F103RB" />
+					<Add option="-DTOOLCHAIN_GCC" />
+					<Add option="-DTARGET_FF_MORPHO" />
+					<Add option="-DTARGET_CORTEX_M" />
+					<Add option="-DTARGET_STM32F1" />
+					<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+					<Add option="-DARM_MATH_CM3" />
+					<Add option="-D__MBED__=1" />
+					<Add option="-DTARGET_STM" />
+					<Add option="-DTOOLCHAIN_GCC_ARM" />
+					<Add option="-D__CORTEX_M3" />
+					<Add option="-DTARGET_M3" />
+					<Add option="-DTARGET_STM32F103RB" />
+					<Add option="-Wno-unused-parameter" />
+					<Add option="-Wno-missing-field-initializers" />
+					<Add option="-fmessage-length=0" />
+					<Add option="-fno-builtin" />
+					<Add option="-fno-delete-null-pointer-checks" />
+					<Add option="-u _printf_float" />
+					<Add directory="." />
+					<Add directory="HygroClip2" />
+					<Add directory="SPI_TFT_ILI9341" />
+					<Add directory="SPI_TFT_ILI9341\TFT_fonts" />
+					<Add directory="mbed-src" />
+					<Add directory="mbed-src\api" />
+					<Add directory="mbed-src\hal" />
+					<Add directory="mbed-src\targets" />
+					<Add directory="mbed-src\targets\cmsis" />
+					<Add directory="mbed-src\targets\cmsis\TARGET_STM" />
+					<Add directory="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB" />
+					<Add directory="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\TOOLCHAIN_GCC_ARM" />
+					<Add directory="mbed-src\targets\hal" />
+					<Add directory="mbed-src\targets\hal\TARGET_STM" />
+					<Add directory="mbed-src\targets\hal\TARGET_STM\TARGET_NUCLEO_F103RB" />
+					<Add directory="mbed-src\common" />
+				</Compiler>
+				<Linker>
+					<Add option="-lstdc++" />
+					<Add option="-eb_start_files" />
+					<Add option="-eb_lib=n" />
+					<Add option="-Wl,--gc-sections" />
+					<Add option="-Wl,--wrap,main" />
+					<Add library="supc++" />
+					<Add library="m" />
+					<Add library="c" />
+					<Add library="gcc" />
+					<Add library="nosys" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="GraphScale.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="GraphScale.h" />
+		<Unit filename="HygroClip2\HygroClip2.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="HygroClip2\HygroClip2.h" />
+		<Unit filename="LineGraph.h" />
+		<Unit filename="SPI_TFT_ILI9341\GraphicsDisplay.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="SPI_TFT_ILI9341\GraphicsDisplay.h" />
+		<Unit filename="SPI_TFT_ILI9341\SPI_TFT_ILI9341.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="SPI_TFT_ILI9341\SPI_TFT_ILI9341.h" />
+		<Unit filename="SPI_TFT_ILI9341\SPI_TFT_ILI9341_NUCLEO.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="SPI_TFT_ILI9341\SPI_TFT_ILI9341_NXP.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="SPI_TFT_ILI9341\TFT_fonts\Arial12x12.h" />
+		<Unit filename="SPI_TFT_ILI9341\TFT_fonts\Arial24x23.h" />
+		<Unit filename="SPI_TFT_ILI9341\TFT_fonts\Arial28x28.h" />
+		<Unit filename="SPI_TFT_ILI9341\TFT_fonts\font_big.h" />
+		<Unit filename="SPI_TFT_ILI9341\TextDisplay.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="SPI_TFT_ILI9341\TextDisplay.h" />
+		<Unit filename="main.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\api\AnalogIn.h" />
+		<Unit filename="mbed-src\api\AnalogOut.h" />
+		<Unit filename="mbed-src\api\BusIn.h" />
+		<Unit filename="mbed-src\api\BusInOut.h" />
+		<Unit filename="mbed-src\api\BusOut.h" />
+		<Unit filename="mbed-src\api\CAN.h" />
+		<Unit filename="mbed-src\api\CallChain.h" />
+		<Unit filename="mbed-src\api\DigitalIn.h" />
+		<Unit filename="mbed-src\api\DigitalInOut.h" />
+		<Unit filename="mbed-src\api\DigitalOut.h" />
+		<Unit filename="mbed-src\api\DirHandle.h" />
+		<Unit filename="mbed-src\api\Ethernet.h" />
+		<Unit filename="mbed-src\api\FileBase.h" />
+		<Unit filename="mbed-src\api\FileHandle.h" />
+		<Unit filename="mbed-src\api\FileLike.h" />
+		<Unit filename="mbed-src\api\FilePath.h" />
+		<Unit filename="mbed-src\api\FileSystemLike.h" />
+		<Unit filename="mbed-src\api\FunctionPointer.h" />
+		<Unit filename="mbed-src\api\I2C.h" />
+		<Unit filename="mbed-src\api\I2CSlave.h" />
+		<Unit filename="mbed-src\api\InterruptIn.h" />
+		<Unit filename="mbed-src\api\InterruptManager.h" />
+		<Unit filename="mbed-src\api\LocalFileSystem.h" />
+		<Unit filename="mbed-src\api\PortIn.h" />
+		<Unit filename="mbed-src\api\PortInOut.h" />
+		<Unit filename="mbed-src\api\PortOut.h" />
+		<Unit filename="mbed-src\api\PwmOut.h" />
+		<Unit filename="mbed-src\api\RawSerial.h" />
+		<Unit filename="mbed-src\api\SPI.h" />
+		<Unit filename="mbed-src\api\SPISlave.h" />
+		<Unit filename="mbed-src\api\Serial.h" />
+		<Unit filename="mbed-src\api\SerialBase.h" />
+		<Unit filename="mbed-src\api\Stream.h" />
+		<Unit filename="mbed-src\api\Ticker.h" />
+		<Unit filename="mbed-src\api\Timeout.h" />
+		<Unit filename="mbed-src\api\Timer.h" />
+		<Unit filename="mbed-src\api\TimerEvent.h" />
+		<Unit filename="mbed-src\api\can_helper.h" />
+		<Unit filename="mbed-src\api\mbed.h" />
+		<Unit filename="mbed-src\api\mbed_assert.h" />
+		<Unit filename="mbed-src\api\mbed_debug.h" />
+		<Unit filename="mbed-src\api\mbed_error.h" />
+		<Unit filename="mbed-src\api\mbed_interface.h" />
+		<Unit filename="mbed-src\api\platform.h" />
+		<Unit filename="mbed-src\api\rtc_time.h" />
+		<Unit filename="mbed-src\api\semihost_api.h" />
+		<Unit filename="mbed-src\api\toolchain.h" />
+		<Unit filename="mbed-src\api\wait_api.h" />
+		<Unit filename="mbed-src\common\BusIn.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\BusInOut.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\BusOut.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\CAN.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\CallChain.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\Ethernet.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\FileBase.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\FileLike.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\FilePath.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\FileSystemLike.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\FunctionPointer.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\I2C.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\I2CSlave.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\InterruptIn.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\InterruptManager.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\LocalFileSystem.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\RawSerial.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\SPI.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\SPISlave.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\Serial.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\SerialBase.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\Stream.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\Ticker.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\Timeout.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\Timer.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\TimerEvent.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\assert.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\common\board.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\common\error.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\common\exit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\common\gpio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\common\mbed_interface.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\common\pinmap_common.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\common\retarget.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Sensor">
+				<Option CompilerOptionsRelation="1" />
+				<Add option="-std=gnu++98" />
+				<Add option="-fno-rtti" />
+				<Add option="-Wall" />
+				<Add option="-Wextra" />
+				<Add option="-Wno-unused-parameter" />
+				<Add option="-Wno-missing-field-initializers" />
+				<Add option="-fmessage-length=0" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-builtin" />
+				<Add option="-ffunction-sections" />
+				<Add option="-fdata-sections" />
+				<Add option="-fno-delete-null-pointer-checks" />
+				<Add option="-fomit-frame-pointer" />
+				<Add option="-O2" />
+				<Add option="-g3" />
+				<Add option="-DTARGET_FF_ARDUINO" />
+				<Add option="-DTARGET_NUCLEO_F103RB" />
+				<Add option="-DTOOLCHAIN_GCC" />
+				<Add option="-DTARGET_FF_MORPHO" />
+				<Add option="-DTARGET_CORTEX_M" />
+				<Add option="-DTARGET_STM32F1" />
+				<Add option="-DMBED_BUILD_TIMESTAMP=1455694336.4" />
+				<Add option="-DARM_MATH_CM3" />
+				<Add option="-D__MBED__=1" />
+				<Add option="-DTARGET_STM" />
+				<Add option="-DTOOLCHAIN_GCC_ARM" />
+				<Add option="-D__CORTEX_M3" />
+				<Add option="-DTARGET_M3" />
+				<Add option="-DTARGET_STM32F103RB" />
+			</Option>
+		</Unit>
+		<Unit filename="mbed-src\common\rtc_time.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\common\semihost_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\common\us_ticker_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\common\wait_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\hal\analogin_api.h" />
+		<Unit filename="mbed-src\hal\analogout_api.h" />
+		<Unit filename="mbed-src\hal\can_api.h" />
+		<Unit filename="mbed-src\hal\ethernet_api.h" />
+		<Unit filename="mbed-src\hal\gpio_api.h" />
+		<Unit filename="mbed-src\hal\gpio_irq_api.h" />
+		<Unit filename="mbed-src\hal\i2c_api.h" />
+		<Unit filename="mbed-src\hal\pinmap.h" />
+		<Unit filename="mbed-src\hal\port_api.h" />
+		<Unit filename="mbed-src\hal\pwmout_api.h" />
+		<Unit filename="mbed-src\hal\rtc_api.h" />
+		<Unit filename="mbed-src\hal\serial_api.h" />
+		<Unit filename="mbed-src\hal\sleep_api.h" />
+		<Unit filename="mbed-src\hal\spi_api.h" />
+		<Unit filename="mbed-src\hal\us_ticker_api.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\TOOLCHAIN_GCC_ARM\startup_stm32f10x.S">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\cmsis.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\cmsis_nvic.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\cmsis_nvic.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\misc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\misc.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_adc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_adc.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_bkp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_bkp.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_can.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_can.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_cec.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_cec.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_conf.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_crc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_crc.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_dac.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_dac.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_dbgmcu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_dbgmcu.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_dma.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_dma.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_exti.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_exti.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_flash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_flash.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_fsmc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_fsmc.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_gpio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_gpio.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_i2c.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_i2c.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_iwdg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_iwdg.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_pwr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_pwr.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_rcc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_rcc.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_rtc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_rtc.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_sdio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_sdio.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_spi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_spi.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_tim.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_tim.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_usart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_usart.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_wwdg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\stm32f10x_wwdg.h" />
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\system_stm32f10x.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\cmsis\TARGET_STM\TARGET_NUCLEO_F103RB\system_stm32f10x.h" />
+		<Unit filename="mbed-src\targets\cmsis\core_ca9.h" />
+		<Unit filename="mbed-src\targets\cmsis\core_caFunc.h" />
+		<Unit filename="mbed-src\targets\cmsis\core_caInstr.h" />
+		<Unit filename="mbed-src\targets\cmsis\core_ca_mmu.h" />
+		<Unit filename="mbed-src\targets\cmsis\core_cm0.h" />
+		<Unit filename="mbed-src\targets\cmsis\core_cm0plus.h" />
+		<Unit filename="mbed-src\targets\cmsis\core_cm3.h" />
+		<Unit filename="mbed-src\targets\cmsis\core_cm4.h" />
+		<Unit filename="mbed-src\targets\cmsis\core_cm4_simd.h" />
+		<Unit filename="mbed-src\targets\cmsis\core_cmFunc.h" />
+		<Unit filename="mbed-src\targets\cmsis\core_cmInstr.h" />
+		<Unit filename="mbed-src\targets\hal\TARGET_STM\TARGET_NUCLEO_F103RB\PeripheralNames.h" />
+		<Unit filename="mbed-src\targets\hal\TARGET_STM\TARGET_NUCLEO_F103RB\PeripheralPins.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\hal\TARGET_STM\TARGET_NUCLEO_F103RB\PeripheralPins.h" />
+		<Unit filename="mbed-src\targets\hal\TARGET_STM\TARGET_NUCLEO_F103RB\PinNames.h" />
+		<Unit filename="mbed-src\targets\hal\TARGET_STM\TARGET_NUCLEO_F103RB\PortNames.h" />
+		<Unit filename="mbed-src\targets\hal\TARGET_STM\TARGET_NUCLEO_F103RB\analogin_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\hal\TARGET_STM\TARGET_NUCLEO_F103RB\device.h" />
+		<Unit filename="mbed-src\targets\hal\TARGET_STM\TARGET_NUCLEO_F103RB\gpio_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\hal\TARGET_STM\TARGET_NUCLEO_F103RB\gpio_irq_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\hal\TARGET_STM\TARGET_NUCLEO_F103RB\gpio_object.h" />
+		<Unit filename="mbed-src\targets\hal\TARGET_STM\TARGET_NUCLEO_F103RB\i2c_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\hal\TARGET_STM\TARGET_NUCLEO_F103RB\mbed_overrides.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\hal\TARGET_STM\TARGET_NUCLEO_F103RB\objects.h" />
+		<Unit filename="mbed-src\targets\hal\TARGET_STM\TARGET_NUCLEO_F103RB\pinmap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\hal\TARGET_STM\TARGET_NUCLEO_F103RB\port_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\hal\TARGET_STM\TARGET_NUCLEO_F103RB\pwmout_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\hal\TARGET_STM\TARGET_NUCLEO_F103RB\rtc_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\hal\TARGET_STM\TARGET_NUCLEO_F103RB\serial_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\hal\TARGET_STM\TARGET_NUCLEO_F103RB\sleep.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\hal\TARGET_STM\TARGET_NUCLEO_F103RB\spi_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mbed-src\targets\hal\TARGET_STM\TARGET_NUCLEO_F103RB\us_ticker.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger>
+				<target_debugging_settings target="Sensor" active_interface="ST-link">
+					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBLOCKS}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="2" reg_filter="0" active_family="STMicroelectronics">
+						<family_options family_id="STMicroelectronics">
+							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
+							<option opt_id="ID_VECTOR_START" opt_value="0x08000000" />
+							<option opt_id="ID_RESET_TYPE" opt_value="System" />
+							<option opt_id="ID_LOAD_PROGRAM" opt_value="1" />
+							<option opt_id="ID_SEMIHOST_CHECK" opt_value="0" />
+							<option opt_id="ID_RAM_EXEC" opt_value="0" />
+							<option opt_id="ID_VEC_TABLE" opt_value="1" />
+							<option opt_id="ID_DONT_CONN_RESET" opt_value="0" />
+							<option opt_id="ID_ALL_MODE_DEBUG" opt_value="0" />
+							<option opt_id="ID_DEV_ADDR" opt_value="" />
+							<option opt_id="ID_VERBOSE_LEVEL" opt_value="3" />
+						</family_options>
+					</debug_interface>
+				</target_debugging_settings>
+			</debugger>
+			<envvars />
+		</Extensions>
+	</Project>
+</EmBlocks_project_file>
