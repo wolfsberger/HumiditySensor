@@ -1,4 +1,5 @@
 #include "HygroClip2.h"
+#include <cmath>
 
 HygroClip2::HygroClip2(PinName tx, PinName rx)
     : uart_(tx, rx), temperature_(0.0f), humidity_(0.0f), dataReadyToPars_(false)
@@ -12,7 +13,7 @@ void HygroClip2::uartCallback()
 {
     static size_t index = 0;
     uint8_t data = uart_.getc();
-    
+
     if (dataReadyToPars_) {
         return;
     }
@@ -38,13 +39,15 @@ void HygroClip2::update()
         dataReadyToPars_ = false;
         humidity_ = atof(reinterpret_cast<char *>(&buffer_[11]));
         temperature_ = atof(reinterpret_cast<char *>(&buffer_[29]));
+        isDataValid_ = true;
     }
     else
     {
-        humidity_ = -1.0f;
-        temperature_ = -1.0f;
+        humidity_ = NAN;
+        temperature_ = NAN;
+        isDataValid_ = false;
     }
-    
+
     uart_.printf("{F00RDD}\r");
 }
 
@@ -66,4 +69,8 @@ float HygroClip2::getAbsolutHumidity()
     float partialPressure = (getHumidity() * saturationPressure) / 100.0f;
     float absoluteHumidity = partialPressure / (461.51f * (getTemperature() + 273.15f));
     return absoluteHumidity*1000;
+}
+bool HygroClip2::isDataValid()
+{
+    return isDataValid_;
 }

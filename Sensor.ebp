@@ -184,6 +184,7 @@
 			</Option>
 		</Unit>
 		<Unit filename="SPI_TFT_ILI9341\GraphicsDisplay.h" />
+		<Unit filename="SPI_TFT_ILI9341\Portability.h" />
 		<Unit filename="SPI_TFT_ILI9341\SPI_TFT_ILI9341.cpp">
 			<Option compilerVar="CC" />
 			<Option target="Sensor">

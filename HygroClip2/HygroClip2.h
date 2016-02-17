@@ -14,16 +14,18 @@ public:
     float getHumidity();
     float getDewPoint();
     float getAbsolutHumidity();
+    bool isDataValid();
 private:
     // Private functions
     void uartCallback();
-        
+
     // Variables
     Serial uart_;
     float temperature_;
     float humidity_;
     bool dataReadyToPars_;
     int8_t buffer_[HYGROCLIP_BUFFER_SIZE + 1];
+    bool isDataValid_;
 };
 
 #endif

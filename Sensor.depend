@@ -402,10 +402,11 @@
 1455694846 c:\users\wolfsberger\documents\github\humiditysensor\spi_tft_ili9341\textdisplay.h
 	"mbed.h"
 
-1455694755 source:c:\users\wolfsberger\documents\github\humiditysensor\hygroclip2\hygroclip2.cpp
+1455709241 source:c:\users\wolfsberger\documents\github\humiditysensor\hygroclip2\hygroclip2.cpp
 	"HygroClip2.h"
+	<cmath>
 
-1455694755 c:\users\wolfsberger\documents\github\humiditysensor\hygroclip2\hygroclip2.h
+1455698312 c:\users\wolfsberger\documents\github\humiditysensor\hygroclip2\hygroclip2.h
 	"mbed.h"
 
 1455694846 source:c:\users\wolfsberger\documents\github\humiditysensor\spi_tft_ili9341\spi_tft_ili9341.cpp
@@ -638,7 +639,7 @@
 1455694756 source:c:\users\wolfsberger\documents\github\humiditysensor\mbed-src\targets\cmsis\target_stm\target_nucleo_f103rb\misc.c
 	"misc.h"
 
-1455694754 source:c:\users\wolfsberger\documents\github\humiditysensor\main.cpp
+1455715392 source:c:\users\wolfsberger\documents\github\humiditysensor\main.cpp
 	"stdio.h"
 	"mbed.h"
 	"HygroClip2.h"
@@ -648,9 +649,10 @@
 	"GraphScale.h"
 	"LineGraph.h"
 
-1455696011 c:\users\wolfsberger\documents\github\humiditysensor\spi_tft_ili9341\tft_fonts\arial12x12.h
+1455702176 c:\users\wolfsberger\documents\github\humiditysensor\spi_tft_ili9341\tft_fonts\arial12x12.h
+	"Portability.h"
 
-1455696016 c:\users\wolfsberger\documents\github\humiditysensor\spi_tft_ili9341\tft_fonts\arial28x28.h
+1455710921 c:\users\wolfsberger\documents\github\humiditysensor\spi_tft_ili9341\tft_fonts\arial28x28.h
 
 1455694754 c:\users\wolfsberger\documents\github\humiditysensor\linegraph.h
 	"SPI_TFT_ILI9341.h"
@@ -827,4 +829,6 @@
 	<stddef.h>
 	"us_ticker_api.h"
 	"PeripheralNames.h"
+
+1455701621 c:\users\wolfsberger\documents\github\humiditysensor\spi_tft_ili9341\portability.h
 
