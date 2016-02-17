@@ -24,7 +24,6 @@
 					<Add option="-fdata-sections" />
 					<Add option="-ffunction-sections" />
 					<Add option="-O2" />
-					<Add option="-g3" />
 					<Add option="-DTARGET_FF_ARDUINO" />
 					<Add option="-DTARGET_NUCLEO_F103RB" />
 					<Add option="-DTOOLCHAIN_GCC" />
