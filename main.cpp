@@ -14,7 +14,8 @@ SPI_TFT_ILI9341 TFT(SPI_MOSI,SPI_MISO,SPI_SCK,SPI_CS,D9,D7);
 
 const int ColorTemperature = RGB(0xff,0x37,0x00);
 const int ColorHumidity = RGB(0x00,0xc8,0xff);
-const int ColorOtherValues = RGB(0x00,0xE8,0x59);
+const int ColorDewPoint = RGB(0x00,0xE8,0x59);
+const int ColorHumidityAbs = RGB(0xff,0x44,0xa5);
 const int GraphUpdateRateInSeconds = 5;
 
 void drawChangingValues()
@@ -26,9 +27,10 @@ void drawChangingValues()
     TFT.locate(10,70);
     TFT.foreground(ColorHumidity);
     TFT.printf("%.1f%%rH ",sensor.getHumidity());
-    TFT.foreground(ColorOtherValues);
+    TFT.foreground(ColorHumidityAbs);
     TFT.locate(10,115);
     TFT.printf("%.3fg/m3 ",sensor.getAbsolutHumidity());
+    TFT.foreground(ColorDewPoint);
     TFT.locate(10,160);
     TFT.printf("%.1f*C ",sensor.getDewPoint());    // * will be displayed as °
 }
@@ -65,6 +67,7 @@ int main()
     scale.draw(White);
     LineGraph<200> graphTemperature(&TFT,1,200,200,100,0,100);
     LineGraph<200> graphHumidity(&TFT,1,200,200,100,0,100);
+    LineGraph<200> graphDewPoint(&TFT,1,200,200,100,0,100);
 
     set_time(0);
 
@@ -80,9 +83,11 @@ int main()
             set_time(0);
             graphTemperature.addItem(sensor.getTemperature());
             graphHumidity.addItem(sensor.getHumidity());
+            graphDewPoint.addItem(sensor.getDewPoint());
 
             graphTemperature.draw(ColorTemperature);
             graphHumidity.draw(ColorHumidity);
+            graphDewPoint.draw(ColorDewPoint);
         }
 
         wait(1);
