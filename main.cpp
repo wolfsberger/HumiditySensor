@@ -6,6 +6,7 @@
 #include "Arial28x28.h"
 #include "GraphScale.h"
 #include "LineGraph.h"
+#include "CommandHandler.h"
 
 
 Serial pc(SERIAL_TX, SERIAL_RX);
@@ -16,7 +17,19 @@ const int ColorTemperature = RGB(0xff,0x37,0x00);
 const int ColorHumidity = RGB(0x00,0xc8,0xff);
 const int ColorDewPoint = RGB(0x00,0xE8,0x59);
 const int ColorHumidityAbs = RGB(0xff,0x44,0xa5);
-const int GraphUpdateRateInSeconds = 5;
+const int GraphUpdateRateInSeconds = 1;
+
+uint8_t currentGraph = 0;
+
+bool nextGraph(uint32_t);
+
+LineGraph<200> graphTemperature(&TFT,1,200,200,100,0,100);
+LineGraph<200> graphHumidity(&TFT,1,200,200,100,0,100);
+LineGraph<200> graphDewPoint(&TFT,1,200,200,100,0,100);
+
+
+CommandHandler commandHandler;
+Command commandNextGraph(0x0001, nextGraph);
 
 void drawChangingValues()
 {
@@ -35,9 +48,32 @@ void drawChangingValues()
     TFT.printf("%.1f*C ",sensor.getDewPoint());    // * will be displayed as °
 }
 
+void drawGraphs()
+{
+    graphTemperature.draw(currentGraph == 0 ? ColorTemperature : Black);
+    graphHumidity.draw(currentGraph == 1 ? ColorHumidity : Black);
+    graphDewPoint.draw(currentGraph == 2 ? ColorDewPoint : Black);
+}
+
+void handleUART()
+{
+    uint8_t c = pc.getc();
+    commandHandler.handleCommand(c,0x00000000);
+}
+
+bool nextGraph(uint32_t arg)
+{
+    currentGraph = (currentGraph+1) % 3;
+    return true;
+}
+
 int main()
 {
+    commandHandler.addCommand(&commandNextGraph);
+
     pc.baud(57600);
+    pc.attach(handleUART);
+
     TFT.claim(stdout);      // send stdout to the TFT display
     TFT.background(Black);    // set background to black
     TFT.foreground(White);    // set chars to white
@@ -65,9 +101,6 @@ int main()
 
     GraphScale scale(&TFT,1,200,200,100,0,100,20);
     scale.draw(White);
-    LineGraph<200> graphTemperature(&TFT,1,200,200,100,0,100);
-    LineGraph<200> graphHumidity(&TFT,1,200,200,100,0,100);
-    LineGraph<200> graphDewPoint(&TFT,1,200,200,100,0,100);
 
     set_time(0);
 
@@ -84,10 +117,7 @@ int main()
             graphTemperature.addItem(sensor.getTemperature());
             graphHumidity.addItem(sensor.getHumidity());
             graphDewPoint.addItem(sensor.getDewPoint());
-
-            graphTemperature.draw(ColorTemperature);
-            graphHumidity.draw(ColorHumidity);
-            graphDewPoint.draw(ColorDewPoint);
+            drawGraphs();
         }
 
         wait(1);

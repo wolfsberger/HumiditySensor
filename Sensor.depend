@@ -1262,7 +1262,7 @@
 1455802553 source:c:\users\jan\documents\github\humiditysensor\spi_tft_ili9341\textdisplay.cpp
 	"TextDisplay.h"
 
-1455802908 source:c:\users\jan\documents\github\humiditysensor\main.cpp
+1455879435 source:c:\users\jan\documents\github\humiditysensor\main.cpp
 	"stdio.h"
 	"mbed.h"
 	"HygroClip2.h"
@@ -1271,6 +1271,7 @@
 	"Arial28x28.h"
 	"GraphScale.h"
 	"LineGraph.h"
+	"CommandHandler.h"
 
 1455802553 c:\users\jan\documents\github\humiditysensor\spi_tft_ili9341\tft_fonts\arial12x12.h
 	"Portability.h"
@@ -1664,4 +1665,6 @@
 	<stddef.h>
 	"us_ticker_api.h"
 	"PeripheralNames.h"
+
+1455878988 c:\users\jan\documents\github\humiditysensor\commandhandler.h
 
