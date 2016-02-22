@@ -639,7 +639,7 @@
 1455694756 source:c:\users\wolfsberger\documents\github\humiditysensor\mbed-src\targets\cmsis\target_stm\target_nucleo_f103rb\misc.c
 	"misc.h"
 
-1455715392 source:c:\users\wolfsberger\documents\github\humiditysensor\main.cpp
+1456133656 source:c:\users\wolfsberger\documents\github\humiditysensor\main.cpp
 	"stdio.h"
 	"mbed.h"
 	"HygroClip2.h"
@@ -648,14 +648,16 @@
 	"Arial28x28.h"
 	"GraphScale.h"
 	"LineGraph.h"
+	"CommandHandler.h"
 
 1455702176 c:\users\wolfsberger\documents\github\humiditysensor\spi_tft_ili9341\tft_fonts\arial12x12.h
 	"Portability.h"
 
 1455710921 c:\users\wolfsberger\documents\github\humiditysensor\spi_tft_ili9341\tft_fonts\arial28x28.h
 
-1455694754 c:\users\wolfsberger\documents\github\humiditysensor\linegraph.h
+1456123557 c:\users\wolfsberger\documents\github\humiditysensor\linegraph.h
 	"SPI_TFT_ILI9341.h"
+	<cmath>
 
 1455694756 source:c:\users\wolfsberger\documents\github\humiditysensor\mbed-src\targets\cmsis\target_stm\target_nucleo_f103rb\stm32f10x_adc.c
 	"stm32f10x_adc.h"
@@ -1667,4 +1669,6 @@
 	"PeripheralNames.h"
 
 1455878988 c:\users\jan\documents\github\humiditysensor\commandhandler.h
+
+1456133744 c:\users\wolfsberger\documents\github\humiditysensor\commandhandler.h
 

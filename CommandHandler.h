@@ -1,7 +1,7 @@
 #ifndef COMMANDHANDLER_H_INCLUDED
 #define COMMANDHANDLER_H_INCLUDED
 
-class Command
+class CommandBase
 {
 public:
     // Type definitions
@@ -9,15 +9,15 @@ public:
     typedef uint32_t ParameterType;
     typedef bool(*CallbackType)(ParameterType);
 
-    Command(IDType id, CallbackType callback_)
-        : id_(id), callback_(callback_), nextCommand_(NULL)
+    CommandBase(IDType id)
+        : id_(id), nextCommand_(NULL)
     {}
 
-    Command * next()
+    CommandBase * next()
     {
         return nextCommand_;
     }
-    void setNext(Command * command)
+    void setNext(CommandBase * command)
     {
         nextCommand_ = command;
     }
@@ -25,19 +25,57 @@ public:
     {
         return id_;
     }
-    bool exec(ParameterType param)
+    void operator()(ParameterType param)
     {
-        if (callback_)
-        {
-            return callback_(param);
-        }
-        return false;
+        exec(param);
     }
+    virtual bool exec(ParameterType param) = 0;
 private:
+
     IDType id_;
-    CallbackType callback_;
-    Command * nextCommand_;
+    CommandBase * nextCommand_;
 };
+
+/** Class to create a command that points to a class member.
+ *
+ */
+template <typename T>
+class MemberCommand : public CommandBase
+{
+public:
+     MemberCommand(CommandBase::IDType id, T* target, bool (T::*func)(CommandBase::ParameterType))
+        : CommandBase(id), target_(target), function_(func)
+     {}
+
+     bool exec(ParameterType param)
+     {
+        return (target_->*function_)(param);
+     }
+
+private:
+     T * target_;
+     bool (T::*function_)(CommandBase::ParameterType);
+};
+
+/** Class to create a command that points to function.
+ *
+ */
+class FunctionCommand : public CommandBase
+{
+public:
+     FunctionCommand(CommandBase::IDType id, CommandBase::CallbackType func)
+        :  CommandBase(id), function_(func)
+     {}
+
+     bool exec(ParameterType param)
+     {
+        return function_(param);
+     }
+
+private:
+     CommandBase::CallbackType function_;
+};
+
 
 class CommandHandler
 {
@@ -45,7 +83,7 @@ public:
     CommandHandler()
         : firstCommand_(NULL), lastCommand_(NULL)
     {}
-    void addCommand(Command * command)
+    void addCommand(CommandBase * command)
     {
         if (firstCommand_ == NULL)
         {
@@ -58,9 +96,9 @@ public:
             lastCommand_ = command;
         }
     }
-    void handleCommand(Command::IDType id, Command::ParameterType param)
+    void handleCommand(CommandBase::IDType id, CommandBase::ParameterType param)
     {
-        Command * cmd = firstCommand_;
+        CommandBase * cmd = firstCommand_;
         while (cmd != 0)
         {
             if (cmd->id() == id && cmd->exec(param))
@@ -71,9 +109,9 @@ public:
         }
     }
 private:
-    Command * nextCommand();
-    Command * firstCommand_;
-    Command * lastCommand_;
+    CommandBase * nextCommand();
+    CommandBase * firstCommand_;
+    CommandBase * lastCommand_;
 };
 
 #endif /* COMMANDHANDLER_H_INCLUDED */

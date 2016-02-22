@@ -27,9 +27,20 @@ LineGraph<200> graphTemperature(&TFT,1,200,200,100,0,100);
 LineGraph<200> graphHumidity(&TFT,1,200,200,100,0,100);
 LineGraph<200> graphDewPoint(&TFT,1,200,200,100,0,100);
 
+class TEST
+{
+public:
+    bool run(CommandBase::ParameterType param)
+    {
+        return param < 5;
+    }
+};
+
+TEST X;
 
 CommandHandler commandHandler;
-Command commandNextGraph(0x0001, nextGraph);
+FunctionCommand commandNextGraph(0x0001, nextGraph);
+MemberCommand<TEST> commandTest(0x0002, &X, &TEST::run);
 
 void drawChangingValues()
 {
@@ -64,12 +75,14 @@ void handleUART()
 bool nextGraph(uint32_t arg)
 {
     currentGraph = (currentGraph+1) % 3;
+    drawGraphs();
     return true;
 }
 
 int main()
 {
     commandHandler.addCommand(&commandNextGraph);
+    commandHandler.addCommand(&commandTest);
 
     pc.baud(57600);
     pc.attach(handleUART);
