@@ -75,6 +75,7 @@
 				</Linker>
 			</Target>
 		</Build>
+		<Unit filename="CommandHandler.h" />
 		<Unit filename="GraphScale.cpp">
 			<Option compilerVar="CC" />
 			<Option target="Sensor">

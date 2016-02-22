@@ -11,8 +11,6 @@ public:
     LineGraph(SPI_TFT_ILI9341 * tft, int x, int y, int width, int height, int min, int max)
         : tft_(tft), x_(x), y_(y), width_(width), height_(height), min_(min), max_(max)
     {
-        /*memset(dataOld_,-1.0f,itemCount*sizeof(float));
-        memset(dataNew_,-1.0f,itemCount*sizeof(float));*/
         for(size_t i = 0; i<itemCount; i++)
         {
             dataOld_[i] = NAN;
