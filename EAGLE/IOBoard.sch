@@ -9205,8 +9205,8 @@ http://www.weartronics.com/</description>
 <part name="JP6" library="memmert_joerg" deviceset="JUMPER" device="_SMALL"/>
 <part name="JP7" library="memmert_joerg" deviceset="JUMPER" device="_SMALL"/>
 <part name="Q2" library="crystal" deviceset="MC-306" device="" value="32kHz"/>
-<part name="C8" library="rcl" deviceset="C-EU" device="C0805" value="20p"/>
-<part name="C9" library="rcl" deviceset="C-EU" device="C0805" value="20p"/>
+<part name="C8" library="rcl" deviceset="C-EU" device="C0805" value="10p"/>
+<part name="C9" library="rcl" deviceset="C-EU" device="C0805" value="10p"/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="R5" library="rcl" deviceset="R-EU_" device="R0805" value="0"/>
@@ -9237,6 +9237,8 @@ http://www.weartronics.com/</description>
 <part name="C10" library="rcl" deviceset="C-EU" device="C0805" value="10u"/>
 <part name="C11" library="rcl" deviceset="C-EU" device="C0805" value="10u"/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
+<part name="GND15" library="supply1" deviceset="GND" device=""/>
+<part name="GND16" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9387,6 +9389,8 @@ http://www.weartronics.com/</description>
 <attribute name="VALUE" x="221.996" y="141.859" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="GND14" gate="1" x="223.52" y="129.54"/>
+<instance part="GND15" gate="1" x="185.42" y="127"/>
+<instance part="GND16" gate="1" x="251.46" y="127" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -9546,6 +9550,21 @@ http://www.weartronics.com/</description>
 <pinref part="C11" gate="G$1" pin="1"/>
 <pinref part="GND14" gate="1" pin="GND"/>
 <wire x1="223.52" y1="134.62" x2="223.52" y2="132.08" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="195.58" y1="132.08" x2="185.42" y2="132.08" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="GND"/>
+<label x="177.8" y="132.08" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="C10" gate="G$1" pin="1"/>
+<wire x1="185.42" y1="132.08" x2="177.8" y2="132.08" width="0.1524" layer="91"/>
+<junction x="185.42" y="132.08"/>
+<pinref part="GND15" gate="1" pin="GND"/>
+<wire x1="185.42" y1="132.08" x2="185.42" y2="129.54" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="BAT" gate="G$1" pin="2"/>
+<pinref part="GND16" gate="1" pin="GND"/>
+<wire x1="254" y1="127" x2="266.7" y2="127" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -10085,22 +10104,6 @@ http://www.weartronics.com/</description>
 <wire x1="177.8" y1="144.78" x2="177.8" y2="139.7" width="0.1524" layer="91"/>
 <pinref part="C10" gate="G$1" pin="2"/>
 <junction x="185.42" y="139.7"/>
-</segment>
-</net>
-<net name="BAT-" class="0">
-<segment>
-<pinref part="BAT" gate="G$1" pin="2"/>
-<wire x1="266.7" y1="127" x2="259.08" y2="127" width="0.1524" layer="91"/>
-<label x="259.08" y="127" size="1.27" layer="95" rot="R180" xref="yes"/>
-<wire x1="266.7" y1="127" x2="259.08" y2="127" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<wire x1="195.58" y1="132.08" x2="185.42" y2="132.08" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="GND"/>
-<label x="177.8" y="132.08" size="1.778" layer="95" rot="R180" xref="yes"/>
-<pinref part="C10" gate="G$1" pin="1"/>
-<wire x1="185.42" y1="132.08" x2="177.8" y2="132.08" width="0.1524" layer="91"/>
-<junction x="185.42" y="132.08"/>
 </segment>
 </net>
 <net name="N$15" class="0">

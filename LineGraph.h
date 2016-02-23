@@ -47,8 +47,7 @@ public:
 
             tft_->line(x1, y1Old, x2, y2Old, Black);
 
-            if ((dataNew_[indexItem1] == NAN) ||
-                (dataNew_[indexItem2] == NAN))
+            if (isnan(dataNew_[indexItem1]) || isnan(dataNew_[indexItem2]))
             {
                 continue;
             }
@@ -64,6 +63,11 @@ private:
     {
         static float valueRange = static_cast<float>(max_-min_);
         static float buttomOfGraph = static_cast<float>(y_+height_);
+
+        if (isnan(ypos))
+        {
+            return buttomOfGraph;
+        }
 
         if (ypos < min_)
             ypos = min_;

@@ -17,7 +17,7 @@ UsedLibrary="R:/Elektronik/Schaltbilder/Eagle/LBR/Memmert/STM/stm32.lbr"
 [Win_1]
 Type="Control Panel"
 Loc="-1920 -30 -1321 369"
-State=1
+State=3
 Number=0
 
 [Desktop]
