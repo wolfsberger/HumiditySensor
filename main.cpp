@@ -7,21 +7,25 @@
 #include "GraphScale.h"
 #include "LineGraph.h"
 #include "CommandHandler.h"
+#include "Encoder.h"
 
 //Serial pc(SERIAL_TX, SERIAL_RX);
 HygroClip2 sensor(D8,D2);
 SPI_TFT_ILI9341 TFT(SPI_MOSI,SPI_MISO,SPI_SCK,SPI_CS,D9,D7);
 
-const int ColorTemperature = RGB(0xff,0x37,0x00);
-const int ColorHumidity = RGB(0x00,0xc8,0xff);
-const int ColorDewPoint = RGB(0x00,0xE8,0x59);
-const int ColorHumidityAbs = RGB(0xff,0x44,0xa5);
+const int ColorTemperature =    RGB(0xff,0x37,0x00);
+const int ColorHumidity =       RGB(0x00,0xc8,0xff);
+const int ColorDewPoint =       RGB(0x00,0xE8,0x59);
+const int ColorHumidityAbs =    RGB(0xff,0x44,0xa5);
 const float GraphUpdateRateInSeconds = 5;
 
 
-LineGraph<200> graphTemperature(&TFT,1,200,200,100,0,100);
-LineGraph<200> graphHumidity(&TFT,1,200,200,100,0,100);
-LineGraph<200> graphDewPoint(&TFT,1,200,200,100,0,100);
+LineGraph<200>  graphTemperature    (&TFT,1,200,200,100,0,100);
+LineGraph<200>  graphHumidity       (&TFT,1,200,200,100,0,100);
+LineGraph<200>  graphDewPoint       (&TFT,1,200,200,100,0,100);
+GraphScale      scale               (&TFT,1,200,200,100,0,100,20);
+
+//RotaryEncoder encoder(D3, D4);
 
 CommandHandler commandHandler;
 
@@ -51,7 +55,7 @@ void drawGraphs()
 
 int main()
 {
-    TFT.claim(stdout);      // send stdout to the TFT display
+    //TFT.claim(stdout);      // send stdout to the TFT display
     TFT.background(Black);    // set background to black
     TFT.foreground(White);    // set chars to white
     TFT.cls();                // clear the screen
@@ -76,11 +80,12 @@ int main()
     TFT.locate(10,145);
     TFT.printf("Taupunkt");
 
-    GraphScale scale(&TFT,1,200,200,100,0,100,20);
     scale.draw(White);
 
     float seconds = 0;
     const float waitTime = 1.0f;
+
+    printf("running..\n");
 
     while(1) {
 
@@ -98,5 +103,11 @@ int main()
 
         seconds += waitTime;
         wait(waitTime);
+
+        // Encoder Tests
+        /*TFT.locate(5,305);
+        TFT.set_font((unsigned char*) Arial12x12);
+        TFT.printf("Encoder: %d", encoder.position());
+        wait(0.05);*/
     }
 }

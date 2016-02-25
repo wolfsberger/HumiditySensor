@@ -639,7 +639,7 @@
 1455694756 source:c:\users\wolfsberger\documents\github\humiditysensor\mbed-src\targets\cmsis\target_stm\target_nucleo_f103rb\misc.c
 	"misc.h"
 
-1456211616 source:c:\users\wolfsberger\documents\github\humiditysensor\main.cpp
+1456402948 source:c:\users\wolfsberger\documents\github\humiditysensor\main.cpp
 	"stdio.h"
 	"mbed.h"
 	"HygroClip2.h"
@@ -649,6 +649,7 @@
 	"GraphScale.h"
 	"LineGraph.h"
 	"CommandHandler.h"
+	"Encoder.h"
 
 1455702176 c:\users\wolfsberger\documents\github\humiditysensor\spi_tft_ili9341\tft_fonts\arial12x12.h
 	"Portability.h"
@@ -1671,4 +1672,6 @@
 1455878988 c:\users\jan\documents\github\humiditysensor\commandhandler.h
 
 1456134029 c:\users\wolfsberger\documents\github\humiditysensor\commandhandler.h
+
+1456399721 c:\users\wolfsberger\documents\github\humiditysensor\encoder.h
 

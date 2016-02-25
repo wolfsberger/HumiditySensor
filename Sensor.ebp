@@ -76,6 +76,7 @@
 			</Target>
 		</Build>
 		<Unit filename="CommandHandler.h" />
+		<Unit filename="Encoder.h" />
 		<Unit filename="GraphScale.cpp">
 			<Option compilerVar="CC" />
 			<Option target="Sensor">
@@ -1584,7 +1585,7 @@
 							<option opt_id="ID_VECTOR_START" opt_value="0x08000000" />
 							<option opt_id="ID_RESET_TYPE" opt_value="System" />
 							<option opt_id="ID_LOAD_PROGRAM" opt_value="1" />
-							<option opt_id="ID_SEMIHOST_CHECK" opt_value="0" />
+							<option opt_id="ID_SEMIHOST_CHECK" opt_value="1" />
 							<option opt_id="ID_RAM_EXEC" opt_value="0" />
 							<option opt_id="ID_VEC_TABLE" opt_value="1" />
 							<option opt_id="ID_DONT_CONN_RESET" opt_value="0" />
